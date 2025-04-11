@@ -15,5 +15,5 @@ resource "aws_route53_record" "main" {
   name     = "${var.Name}-${var.env}.${var.domain}"
   type     = "A"
   ttl      = "10"
-  records  = [aws_instance.main.private_ip]
+  records  = [ "${var.Name}" == "frontend" ? aws_instance.main.public_ip :  aws_instance.main.private_ip  ]
 }
