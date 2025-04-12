@@ -15,6 +15,11 @@ data "aws_instance" "main" {
     private_ip = aws_instance.main.private_ip
 }
 
-output "ip" {
-  value = data.aws_instance.main.private_ip
+
+
+data "aws_security_group" "main" {
+  filter {
+    name   = "Name"
+    values = ["Lapsecuritygroup*"]
+  }
 }
