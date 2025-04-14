@@ -3,7 +3,7 @@ data "aws_ami" "main" {
 
   filter {
     name   = "name"
-    values = [DevOps-LabImage-RHEL9]
+    values = ["DevOps-LabImage-RHEL9"]
   }
 
   owners = ["703671922956"]
@@ -22,4 +22,9 @@ data "aws_security_group" "main" {
     name   = "Name"
     values = ["Lapsecuritygroup*"]
   }
+}
+
+data "aws_route53_zone" "main" {
+  name         = var.domain
+  
 }
