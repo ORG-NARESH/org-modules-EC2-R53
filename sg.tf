@@ -1,9 +1,9 @@
 resource "aws_security_group" "main" {
-  name        = "B59-SG-Terraform"
-  description = "This SG group to allow ssh"
+  name        = var.security_group_name
+  description = "This SG group created for expense project"
  
   tags = {
-    Name = "B59-SG-Terraform"
+    Name = var.security_group_name
   }
 }
 
