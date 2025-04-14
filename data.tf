@@ -20,7 +20,7 @@ data "aws_instance" "main" {
 data "aws_security_group" "main" {
   filter {
     name   = "Name"
-    values = ["Lapsecuritygroup*"]
+    values = ["B59-SG-Terraform*"]
   }
 }
 
