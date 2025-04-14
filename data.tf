@@ -34,6 +34,11 @@ data "aws_route53_zone" "main" {
   
 }
 
+data "aws_route53_zone" "main" {
+  id = data.aws_route53_record.main.id
+  
+}
+
 output "verifying dns" {
   value = data.aws_security_group.main.id
 }
