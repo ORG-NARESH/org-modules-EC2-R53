@@ -1,6 +1,6 @@
 resource "aws_security_group" "main" {
   name        = var.security_group_name
-  description = "terraform expense project"
+  description = "terraform expense project"                         
   
  tags = {
      "Name" = var.security_group_name
