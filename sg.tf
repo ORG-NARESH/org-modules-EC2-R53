@@ -16,9 +16,9 @@ resource "aws_vpc_security_group_ingress_rule" "main" {
 
 resource "aws_vpc_security_group_ingress_rule" "main" {
   security_group_id = aws_security_group.main.id
-  from_port   = var.port_no
+  from_port   = var.from_port_no
   ip_protocol = "tcp"
-  to_port     = var.port_no
+  to_port     = var.to_port_no
 }
 
 resource "aws_vpc_security_group_egress_rule" "main" {
