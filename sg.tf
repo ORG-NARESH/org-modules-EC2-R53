@@ -29,3 +29,4 @@ resource "aws_vpc_security_group_egress_rule" "main" {
   ip_protocol = "tcp"
   to_port     = 0
 }
+

@@ -24,6 +24,11 @@ data "aws_security_group" "main" {
   }
 }
 
+data "aws_security_group"  "main" {
+    id =  data.aws_security_group.main.id
+}
+
+
 data "aws_route53_zone" "main" {
   name         = var.domain
   
