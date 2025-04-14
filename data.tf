@@ -30,10 +30,10 @@ data "aws_ami" "main" {
 # }
 
 
-# data "aws_route53_zone" "main" {
-#   name         = var.domain
+data "aws_route53_zone" "main" {
+  name         = var.domain
   
-# }
+}
 
 # data "aws_route53_zone" "main" {
 #  zone_id = data.aws_route53_zone.main.zone_id
