@@ -1,6 +1,6 @@
 resource "aws_route53_record" "main" {
   
-  zone_id  = data.aws_route53_zone.main.id
+  zone_id  = data.aws_route53_zone.main.zone_id
   name     = "${var.Name}-${var.env}.${var.domain}"
   type     = "A"
   ttl      = "10"
