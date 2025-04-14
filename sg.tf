@@ -1,8 +1,10 @@
-resource "aws_security_group" "allow_tls_ssh" {
+resource "aws_security_group" "main" {
   name        = var.security_group_name
   description = "terraform expense project"
   
-
+ tags = {
+     "Name" = var.security_group_name
+ }
 
     ingress {
       description      = "SSH from VPC"
