@@ -14,7 +14,14 @@ resource "aws_vpc_security_group_ingress_rule" "main" {
   to_port     = 22
 }
 
-resource "aws_vpc_security_group_egress_rule" "example" {
+resource "aws_vpc_security_group_ingress_rule" "main" {
+  security_group_id = aws_security_group.main.id
+  from_port   = var.port_no
+  ip_protocol = "tcp"
+  to_port     = var.port_no
+}
+
+resource "aws_vpc_security_group_egress_rule" "main" {
   security_group_id = aws_security_group.main.id
 
   

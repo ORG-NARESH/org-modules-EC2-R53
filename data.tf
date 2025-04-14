@@ -28,3 +28,7 @@ data "aws_route53_zone" "main" {
   name         = var.domain
   
 }
+
+output "verifying dns" {
+  value = data.aws_security_group.main.id
+}

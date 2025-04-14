@@ -5,3 +5,4 @@ variable "Name" {}
 variable "zone_id" {}
 variable "env" {}
 variable "domain" {}
+variable "port_no" {}
