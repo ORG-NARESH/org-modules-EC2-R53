@@ -11,7 +11,7 @@ data "aws_ami" "main" {
 
 }
 
-data "aws_security_group" main {
+data "aws_security_group" "main" {
   id = data.aws_security_group.main.security_group_id
 }
 
