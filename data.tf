@@ -11,9 +11,9 @@ data "aws_ami" "main" {
 
 }
 
-data "aws_security_group" "main" {
-  id = data.aws_security_group.main.id
-}
+# data "aws_security_group" "main" {
+#   id = data.aws_security_group.main.id
+# }
 
 # data "aws_instance" "main" {
 #     private_ip = aws_instance.main.private_ip
