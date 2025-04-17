@@ -11,13 +11,6 @@ data "aws_ami" "main" {
 
 }
 
-# data "aws_security_group" "main" {
-#   id = data.aws_security_group.main.id
-# }
-
-# data "aws_instance" "main" {
-#     private_ip = aws_instance.main.private_ip
-# }
 
 
 
@@ -28,9 +21,12 @@ data "aws_ami" "main" {
 #   }
 # }
 
-# data "aws_security_group"  "main" {
-#     id =  data.aws_security_group.main.id
-# }
+data "aws_security_group"  "main" {
+  filter {
+    name   = "tag:Name"
+    values = ["${var.Name}-${var.env}-SG"]
+  }
+}
 
 
 data "aws_route53_zone" "main" {
