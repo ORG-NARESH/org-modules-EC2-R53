@@ -15,9 +15,9 @@ resource "aws_security_group" "main" {
       
     }
     ingress {
-      description      = "HTTP from VPC"
-      from_port        = 0
-      to_port          = 0
+      description      = "custom security group"
+      from_port        = var.port_no
+      to_port          = var.port_no
       protocol         = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
     }
