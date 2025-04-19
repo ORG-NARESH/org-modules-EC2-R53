@@ -30,9 +30,8 @@ data "aws_ami" "main" {
 
 
 data "aws_route53_zone" "main" {
-  name         = var.domain
-  
-}
+  name       = "eternallearnings.shop"
+                          }
 
 # data "aws_route53_zone" "main" {
 #  zone_id = data.aws_route53_zone.main.zone_id
