@@ -14,19 +14,7 @@ data "aws_ami" "main" {
 
 
 
-# data "aws_security_group" "main" {
-#   filter {
-#     name   = "Name"
-#     values = ["B59-SG-Terraform*"]
-#   }
-# }
 
-# data "aws_security_group"  "main" {
-#   filter {
-#     name   = "Name"
-#     values = ["${var.Name}-${var.env}-SG"]
-#   }
-# }
 
 
 data "aws_route53_zone" "main" {
