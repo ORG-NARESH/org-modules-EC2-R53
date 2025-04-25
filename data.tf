@@ -5,7 +5,7 @@ data "aws_ami" "main" {
   
  filter {
     name   = "description"
-    values = ["MyPracticeImage"]
+    values = ["DevOps-LabImage-RHEL9"]
   }
 
 
