@@ -21,13 +21,13 @@ resource "aws_security_group" "main" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  # ingress {
-  #   description = "custom security group"
-  #   from_port   = var.port_no_of_nodeexporter
-  #   to_port     = var.port_no_of_nodeexporter
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  # }
+  ingress {
+    description = "custom security group"
+    from_port   = var.port_no_of_nodeexporter
+    to_port     = var.port_no_of_nodeexporter
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   egress {
     description = "TLS from VPC"
     from_port   = 0
