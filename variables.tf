@@ -6,4 +6,4 @@ variable "zone_id" {}
 variable "env" {}
 variable "domain" {}
 variable "port_no" {}
-variable "port_no_of_node-exporter" {}
+variable "port_no_of_nodeexporter" {}

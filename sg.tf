@@ -23,8 +23,8 @@ resource "aws_security_group" "main" {
   }
   ingress {
     description = "custom security group"
-    from_port   = var.port_no_of_node-exporter
-    to_port     = var.port_no_of_node-exporter
+    from_port   = var.port_no_of_nodeexporter
+    to_port     = var.port_no_of_nodeexporter
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
