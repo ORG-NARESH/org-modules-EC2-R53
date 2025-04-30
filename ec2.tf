@@ -14,6 +14,6 @@ resource "aws_instance" "main" {
 
   tags = {
     Name    = "${var.Name}-${var.env}"
-    Monitor = var.monitor
+    Monitor = var.Monitor
   }
 }

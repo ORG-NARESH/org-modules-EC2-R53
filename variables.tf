@@ -7,6 +7,6 @@ variable "env" {}
 variable "domain" {}
 variable "port_no" {}
 variable "port_no_of_nodeexporter" {}
-variable "monitor" {}
+variable "Monitor" {}
 variable "prometheus_server" {}
 
