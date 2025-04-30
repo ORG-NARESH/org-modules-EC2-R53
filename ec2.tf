@@ -13,6 +13,7 @@ resource "aws_instance" "main" {
   vpc_security_group_ids = [aws_security_group.main.id]
 
   tags = {
-    Name = "${var.Name}-${var.env}"
+    Name    = "${var.Name}-${var.env}"
+    Monitor = var.monitor
   }
 }
