@@ -6,7 +6,7 @@ variable "zone_id" {}
 variable "env" {}
 variable "domain" {}
 variable "port_no" {}
-variable "port_no_of_nodeexporter" {}
 variable "Monitor" {}
-variable "prometheus_server" {}
+# variable "prometheus_server" {}
+# variable "port_no_of_nodeexporter" {}
 
