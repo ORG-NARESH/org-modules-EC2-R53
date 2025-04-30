@@ -16,4 +16,7 @@ resource "aws_instance" "main" {
     Name    = "${var.Name}-${var.env}"
     Monitor = var.Monitor
   }
+  lifecycle {
+    ignore_changes = [ami]
+  }
 }
