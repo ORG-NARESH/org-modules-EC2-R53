@@ -21,13 +21,13 @@ resource "aws_security_group" "main" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  # ingress {
-  #   description = "Allows node exporter from prometheus server"
-  #   from_port   = var.port_no_of_nodeexporter
-  #   to_port     = var.port_no_of_nodeexporter
-  #   protocol    = "tcp"
-  #   cidr_blocks = var.prometheus_server
-  # }
+  ingress {
+    description = "Allows node exporter from prometheus server"
+    from_port   = var.port_no_of_nodeexporter
+    to_port     = var.port_no_of_nodeexporter
+    protocol    = "tcp"
+    cidr_blocks = var.prometheus_server
+  }
   egress {
     description = "TLS from VPC"
     from_port   = 0
